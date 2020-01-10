@@ -6,6 +6,8 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
+	"github.com/jinzhu/gorm"
 )
 
 type dadosCliente struct {
@@ -23,6 +25,8 @@ type dadosCliente struct {
 }
 
 func main() {
+	db, err := gorm.Open("postgres", "host=myhost port=myport user=gorm dbname=gorm password=mypassword")
+
 	dadosClientes := []dadosCliente{}
 	file, err := os.Open("C:\\Users\\gabriel.anjos\\Downloads\\base_teste.txt")
 	if err != nil {
@@ -71,6 +75,8 @@ func main() {
 			time.Sleep(2 * time.Second)
 		*/
 	}
+
+	defer db.Close()
 
 	if err := scanner.Err(); err != nil {
 		log.Fatal(err)
