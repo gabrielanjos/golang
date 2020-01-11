@@ -16,7 +16,7 @@ func ReadAndManipulateFile() {
 
 	//dadosClientes := []c.DadosCliente{}
 	var dadosClientes []interface{}
-	file, err := os.Open("github.com/gabrielanjos/golang/base_teste.txt")
+	file, err := os.Open("../base_teste.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
