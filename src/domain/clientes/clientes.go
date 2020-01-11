@@ -18,8 +18,8 @@ type DadosCliente struct {
 	Ticketultimacompra       float64 `gorm:"column:ticketultimacompra"`
 	Lojamaisfrequente        string  `gorm:"column:lojamaisfrequente"`
 	Lojamaisfrequentevalido  bool    `gorm:"column:lojamaisfrequentevalido"`
-	Lojadaultimacompra       string  `gorm:"column:lojamaUltimacompra"`
-	Lojadaultimacompravalido bool    `gorm:"column:lojamaUltimacompraValido"`
+	Lojadaultimacompra       string  `gorm:"column:lojadaultimacompra"`
+	Lojadaultimacompravalido bool    `gorm:"column:lojadaultimacompraValido"`
 }
 
 //TableName Nome da tabela no banco de dados
