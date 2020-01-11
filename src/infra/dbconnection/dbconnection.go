@@ -46,4 +46,4 @@ func GetDB() *gorm.DB {
 
 // para chamar de outro pacote você vai utilizar..
 // db := db_connection.GetDB()
-// db.Create(&logSF) // vai passar como parametro tua variável que tem recebeu a struct, mas um ponteiro dela, por isso &
+// db.Create(&logSF) // vai passar como parametro tua variável que tem recebeu a struct

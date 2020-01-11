@@ -22,13 +22,13 @@ type DadosCliente struct {
 	LojaDaUltimaCompraValido bool    `gorm:"column:lojaDaUltimaCompraValido"`
 }
 
-//TableName adasdasdasdas
+//TableName Nome da tabela no banco de dados
 func (dadosCliente *DadosCliente) TableName() string {
 	return "dadoscliente"
 
 }
 
-//InserirRegistros akdjaksjd
+//InserirRegistros no banco de dados
 func InserirRegistros(insertRecords []interface{}) {
 	db := dbconnection.GetDB()
 	db.Debug().AutoMigrate(&c.DadosCliente{}) //Database migration
