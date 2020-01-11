@@ -31,7 +31,7 @@ func (dadosCliente *DadosCliente) TableName() string {
 //InserirRegistros no banco de dados
 func InserirRegistros(insertRecords []interface{}) {
 	db := dbconnection.GetDB()
-	db.Debug().AutoMigrate(&c.DadosCliente{}) //Database migration
+	db.Debug().AutoMigrate(&DadosCliente{}) //Database migration
 
 	err := gormbulk.BulkInsert(db, insertRecords, 3000)
 	if err != nil {
