@@ -1,7 +1,7 @@
 package main
 
 import (
-	s "github.com/gabrielanjos/golang/service"
+	s "github.com/gabrielanjos/golang/src/service"
 
 	_ "github.com/lib/pq"
 )

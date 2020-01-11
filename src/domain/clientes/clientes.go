@@ -3,6 +3,7 @@ package clientes
 import (
 	"log"
 
+	"github.com/gabrielanjos/golang/src/infra/dbconnection"
 	gormbulk "github.com/t-tiger/gorm-bulk-insert"
 )
 
@@ -30,6 +31,7 @@ func (dadosCliente *DadosCliente) TableName() string {
 //InserirRegistros akdjaksjd
 func InserirRegistros(insertRecords []interface{}) {
 	db := dbconnection.GetDB()
+	db.Debug().AutoMigrate(&c.DadosCliente{}) //Database migration
 
 	err := gormbulk.BulkInsert(db, insertRecords, 3000)
 	if err != nil {

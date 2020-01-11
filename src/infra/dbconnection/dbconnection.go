@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"os"
 
-	c "github.com/gabrielanjos/golang/domain/clientes"
-
 	"github.com/jinzhu/gorm"
 
 	// test comment to avoid error in _
@@ -39,7 +37,6 @@ func init() {
 
 	db = conn
 
-	db.Debug().AutoMigrate(&c.DadosCliente{}) //Database migration
 }
 
 //GetDB - returns a handle to the DB object

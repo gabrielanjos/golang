@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	c "github.com/gabrielanjos/golang/domain/clientes"
-	u "github.com/gabrielanjos/golang/util"
+	c "github.com/gabrielanjos/golang/src/domain/clientes"
+	u "github.com/gabrielanjos/golang/src/util"
 )
 
 //ReadAndManipulateFile função responsável por ler e manipular o arquivo de texto/csv
