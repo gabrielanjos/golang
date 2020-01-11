@@ -19,7 +19,7 @@ type DadosCliente struct {
 	Lojamaisfrequente        string  `gorm:"column:lojamaisfrequente"`
 	Lojamaisfrequentevalido  bool    `gorm:"column:lojamaisfrequentevalido"`
 	Lojadaultimacompra       string  `gorm:"column:lojadaultimacompra"`
-	Lojadaultimacompravalido bool    `gorm:"column:lojadaultimacompraValido"`
+	Lojadaultimacompravalido bool    `gorm:"column:lojadaultimacompravalido"`
 }
 
 //TableName Nome da tabela no banco de dados
