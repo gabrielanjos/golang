@@ -34,16 +34,16 @@ func ReadAndManipulateFile() {
 
 		n := c.DadosCliente{
 			Cpf:                      line[0],
-			CpfValido:                u.ValidaCPF(line[0]),
+			Cpfvalido:                u.ValidaCPF(line[0]),
 			Private:                  private,
 			Incompleto:               incompleto,
-			DataUltimaCompra:         line[3],
-			TicketMedio:              ticketMedio,
-			TicketUltimaCompra:       ticketUltimaCompra,
-			LojaMaisFrequente:        line[6],
-			LojaMaisFrequenteValido:  u.ValidaCNPJ(line[6]),
-			LojaDaUltimaCompra:       line[7],
-			LojaDaUltimaCompraValido: u.ValidaCNPJ(line[7]),
+			Dataultimacompra:         line[3],
+			Ticketmedio:              ticketMedio,
+			Ticketultimacompra:       ticketUltimaCompra,
+			Lojamaisfrequente:        line[6],
+			Lojamaisfrequentevalido:  u.ValidaCNPJ(line[6]),
+			Lojadaultimacompra:       line[7],
+			Lojadaultimacompravalido: u.ValidaCNPJ(line[7]),
 		}
 		dadosClientes = append(dadosClientes, n)
 

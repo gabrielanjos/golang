@@ -10,16 +10,16 @@ import (
 //DadosCliente adasdas
 type DadosCliente struct {
 	Cpf                      string  `gorm:"column:cpf"`
-	CpfValido                bool    `gorm:"column:cpfValido"`
+	Cpfvalido                bool    `gorm:"column:cpfvalido"`
 	Private                  int     `gorm:"column:private"`
 	Incompleto               int     `gorm:"column:incompleto"`
-	DataUltimaCompra         string  `gorm:"column:dataUltimaCompra"`
-	TicketMedio              float64 `gorm:"column:ticketMedio"`
-	TicketUltimaCompra       float64 `gorm:"column:ticketUltimaCompra"`
-	LojaMaisFrequente        string  `gorm:"column:lojaMaisFrequente"`
-	LojaMaisFrequenteValido  bool    `gorm:"column:lojaMaisFrequenteValido"`
-	LojaDaUltimaCompra       string  `gorm:"column:lojaDaUltimaCompra"`
-	LojaDaUltimaCompraValido bool    `gorm:"column:lojaDaUltimaCompraValido"`
+	Dataultimacompra         string  `gorm:"column:dataultimacompra"`
+	Ticketmedio              float64 `gorm:"column:ticketmedio"`
+	Ticketultimacompra       float64 `gorm:"column:ticketultimacompra"`
+	Lojamaisfrequente        string  `gorm:"column:lojamaisfrequente"`
+	Lojamaisfrequentevalido  bool    `gorm:"column:lojamaisfrequentevalido"`
+	Lojadaultimacompra       string  `gorm:"column:lojamaUltimacompra"`
+	Lojadaultimacompravalido bool    `gorm:"column:lojamaUltimacompraValido"`
 }
 
 //TableName Nome da tabela no banco de dados
