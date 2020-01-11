@@ -28,7 +28,6 @@ func init() {
 	dbHost := os.Getenv("db_host")
 
 	dbURI := fmt.Sprintf("host=%s user=%s dbname=%s sslmode=disable password=%s", dbHost, username, dbName, password) //Build connection string
-	//fmt.Println(dbURI)
 
 	conn, err := gorm.Open("postgres", dbURI)
 	if err != nil {
@@ -43,7 +42,3 @@ func init() {
 func GetDB() *gorm.DB {
 	return db
 }
-
-// para chamar de outro pacote você vai utilizar..
-// db := db_connection.GetDB()
-// db.Create(&logSF) // vai passar como parametro tua variável que tem recebeu a struct

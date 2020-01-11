@@ -27,6 +27,7 @@ func ReadAndManipulateFile() {
 	for scanner.Scan() {
 		line := strings.Fields(scanner.Text())
 
+		//Convertendo campos  do arquivo para o tipo correto da varíavel na struct
 		private, _ := strconv.Atoi(line[1])
 		incompleto, _ := strconv.Atoi(line[2])
 		ticketMedio, _ := strconv.ParseFloat(line[4], 64)
@@ -45,23 +46,8 @@ func ReadAndManipulateFile() {
 			Lojadaultimacompra:       line[7],
 			Lojadaultimacompravalido: u.ValidaCNPJ(line[7]),
 		}
-		dadosClientes = append(dadosClientes, n)
 
-		/*
-			fmt.Println(line, len(line))
-			fmt.Printf("CPF: %v\r\n", line[0])
-			fmt.Printf("Valido?: %v\r\n:", ValidaCPF(line[0]))
-			fmt.Printf("PRIVATE: %v\r\n", line[1])
-			fmt.Printf("INCOMPLETO: %v\r\n", line[2])
-			fmt.Printf("DATA DA ÚLTIMA COMPRA: %v\r\n", line[3])
-			fmt.Printf("TICKET MÉDIO : %v\r\n", line[4])
-			fmt.Printf("TICKET DA ÚLTIMA COMPRA: %v\r\n", line[5])
-			fmt.Printf("LOJA MAIS FREQUÊNTE: %v\r\n", line[6])
-			fmt.Printf("Valido?: %v\r\n:", validaCNPJ(line[6]))
-			fmt.Printf("LOJA DA ÚLTIMA COMPRA: %v\r\n", line[7])
-			fmt.Printf("Valido?: %v\r\n:", validaCNPJ(line[7]))
-			time.Sleep(2 * time.Second)
-		*/
+		dadosClientes = append(dadosClientes, n)
 	}
 
 	c.InserirRegistros(dadosClientes)

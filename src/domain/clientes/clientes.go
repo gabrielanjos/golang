@@ -9,6 +9,7 @@ import (
 
 //DadosCliente adasdas
 type DadosCliente struct {
+	ID                       uint64  `gorm:"type:bigint(20) unsigned auto_increment;not null;primary_key"`
 	Cpf                      string  `gorm:"column:cpf"`
 	Cpfvalido                bool    `gorm:"column:cpfvalido"`
 	Private                  int     `gorm:"column:private"`
