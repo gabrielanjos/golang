@@ -34,7 +34,7 @@ func init() {
 		dbtype,
 		username,
 		password,
-		pdbHost,
+		dbHost,
 		dbPort,
 		dbName)
 
