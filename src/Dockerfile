@@ -10,7 +10,7 @@ WORKDIR /app
 COPY ./src/ ./
 
 # Build the Go app
-RUN  go get -d -v github.com/jinzhu/gorm && go get -d -v github.com/gabrielanjos/golang/src  && go build -o main .
+RUN  go get -d -v github.com/jinzhu/gorm && go get -d -v github.com/gabrielanjos/golang/src  && go build -o main . 
 
 # Command to run the executable
 #CMD ["./main"]
