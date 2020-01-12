@@ -15,7 +15,7 @@ services:
     build:
       context: .
       dockerfile: ./src/Dockerfile
-    command: ["go", "run", "main"]
+    command: "sleep 5"
     depends_on:
       - db
     links:
